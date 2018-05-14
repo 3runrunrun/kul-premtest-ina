@@ -13,15 +13,11 @@ class AlgorithmTest extends Controller
   protected $n2 = 1;
   protected $n3 = 0;
   
-  public function primeNumber(Request $request)
+  public function primeNumber($max)
   {
-    $this->validate($request, [
-      'max' => 'required|numeric'
-    ]);
-
     $numbers = array();
 
-    for ($i=0; $i <= $request->input('max'); $i++) { 
+    for ($i=0; $i <= $max; $i++) { 
       $counter = 0;
 
       for ($j=$i; $j >= 1; $j--) { 

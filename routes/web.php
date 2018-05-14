@@ -32,6 +32,6 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
   $router->delete('/delete-review/{id}', 'UserReviewController@destroy');
 });
 
-$router->post('/prime', 'AlgorithmTest@primeNumber');
+$router->get('/prime/{max}', 'AlgorithmTest@primeNumber');
 $router->get('/fibo/{max}', 'AlgorithmTest@fiboNumber');
 $router->get('/zero/{number}', 'AlgorithmTest@bringTheZero');
